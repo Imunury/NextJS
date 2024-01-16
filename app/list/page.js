@@ -1,3 +1,6 @@
+import Image from "next/image";
+import qwe from '/public/food0.png'
+
 export default function List() {
   let stock = ["tomato", "past", "coconut", "asdf"];
   let array = [2, 3, 4];
@@ -17,10 +20,13 @@ export default function List() {
   return (
     <div>
       <h4>list</h4>
-      {stock.map((i) => {
+      {stock.map((a, i) => {
         return (
-          <div>
-            <p>{stock[i]}</p>
+          <div key={i}>
+            <img src={`/food${i}.png`} className="/food_img"></img>
+            {/* next.config.js 셋팅 */}
+            {/* <Image src="https://ssl.pstatic.net/melona/libs/1476/1476963/6e4ca550595061ec9ca2_20240115181032189.jpg" className="food_img" width={500} height={500}></Image> */}
+            <p>{a}</p>
           </div>
         );
       })}
