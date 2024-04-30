@@ -1,9 +1,8 @@
-import { Inter } from "next/font/google";
-import Link from "next/link";
+import "../styles/global.css";
+
 import Navigation from "../components/navigation";
 import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
